@@ -3,12 +3,18 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "module": "esnext",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./src/*"],
+      "#/*": ["./tests/*"]
+    }
   },
   "include": ["src", "tests"]
 }

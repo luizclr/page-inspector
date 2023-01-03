@@ -16,6 +16,7 @@ When a new release is proposed:
 
 - Added `webpack` configuration with `react`
 - Added `styled-components` configuration
+- Added tests configuration
 
 ### Fixed
 
