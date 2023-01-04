@@ -18,6 +18,7 @@ When a new release is proposed:
 - Added `styled-components` configuration
 - Added tests configuration
 - Added eslint configuration
+- Added server to production
 
 ### Fixed
 
@@ -25,6 +26,6 @@ When a new release is proposed:
 
 ### Changed
 
--
+- Move webpack config for separated files - development and production
 
 ### Removed
