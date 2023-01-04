@@ -23,6 +23,7 @@
   },
   "plugins": ["react", "import", "eslint-plugin-import-helpers"],
   "rules": {
+    "no-console": "error",
     "import/extensions": [
       "error",
       "never",
