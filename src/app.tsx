@@ -1,5 +1,5 @@
-import React from "react";
+import { ReactElement } from "react";
 
 import { Title } from "~/app.styles";
 
-export const App = () => <Title>Page Inspector</Title>;
+export const App = (): ReactElement => <Title>Page Inspector</Title>;
