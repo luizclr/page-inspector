@@ -1,20 +1,24 @@
-# Page Inspector
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3686df98-70c6-43be-bb8b-f5f7b5b238c9/deploy-status)](https://app.netlify.com/sites/page-inspector/deploys)
 
-## Tabe of contents
+# 🔍 Page Inspector
 
-- 1. [Requirements](#requirements)
-- 2. [Installation and usage](#installation-and-usage)
-- 3. [Component Structure (general)](#component-structure-general)
-- 4. [Contributing](#contributing)
-  - 4.1 [Branch names](#branch-names)
-  - 4.2 [Commit messages](#commit-messages)
+## 🌐 [page-inspector.netlify.app/](https://page-inspector.netlify.app/)
+
+## 📖 Tabe of contents
+
+1. [📋 Requirements](#requirements)
+2. [🛠️ Installation and usage](#installation-and-usage)
+3. [🗂️ Component Structure (general)](#component-structure-general)
+4. [🧑🏻‍💻 Contributing](#contributing)
+    - [Branch names](#branch-names)
+    - [Commit messages](#commit-messages)
 
 ## Requirements
 
 - NodeJs
 - npm
 - nvm
-## 2. Installation and usage
+## Installation and usage
 
 Using `nvm`? change local node version to project's node version on `.nvmrc`.
 
