@@ -14,11 +14,35 @@ When a new release is proposed:
 
 ### Added
 
+-
+
+### Fixed
+
+-
+
+### Changed
+
+-
+
+### Removed
+
+-
+
+## [1.0.0] - 09/01/2023
+### Added
+
 - Added `webpack` configuration with `react`
 - Added `styled-components` configuration
 - Added tests configuration
 - Added eslint configuration
 - Added server to production
+- Added <Card /> component
+- Added <Loading /> component
+- Added <NavList /> component
+- Added <AddSearch /> page
+- Added <Searches /> page
+- Added <Base /> page
+- Added `ÌnspectionService` and `LocalStorageService`
 
 ### Fixed
 

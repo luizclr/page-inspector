@@ -6,9 +6,21 @@ export const InspectionReducer = (
   action: InspectionAction
 ): InspectionStateType => {
   switch (action.type) {
+    case InspectionActionTypes.loading:
+      return {
+        ...state,
+        isLoading: action.payload.isLoading,
+      };
+    case InspectionActionTypes.error:
+      return {
+        ...state,
+        error: true,
+        isLoading: false,
+      };
     case InspectionActionTypes.add:
       return {
         ...state,
+        isLoading: false,
         inspections: [action.payload.inspection, ...state.inspections],
       };
     case InspectionActionTypes.remove:

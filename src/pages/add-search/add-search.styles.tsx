@@ -27,7 +27,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ disabled: boolean }>`
   margin: 15px;
   font-size: 12pt;
   padding: 10px;
@@ -37,9 +37,10 @@ export const Button = styled.button`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   color: #fff;
   font-weight: bold;
-  background-color: #5dc460;
+  background-color: ${({ disabled }) => (disabled ? "#b5b5b5" : "#5dc460")};
 
   :hover {
-    background-color: #42ab49;
+    background-color: ${({ disabled }) => (disabled ? "#b5b5b5" : "#42ab49")};
+    cursor: pointer;
   }
 `;

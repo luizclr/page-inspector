@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { CardShadowSize, CardStyle } from "~/components/card/types";
 import { Inspection } from "~/entities/inspection";
@@ -16,21 +17,28 @@ import {
 } from "~/pages/searches/searches.styles";
 import { useInspection } from "~/providers/inspection/inspection";
 import { InspectionActionTypes } from "~/reducers/inspector/types";
+import { isNil } from "~/utils";
 
 export const Searches: React.FC = () => {
   const [selectedInspection, setSelectedInspection] = useState<Inspection | null>(null);
   const { inspections, inspectionService, inspectionDispatch } = useInspection();
+  const {
+    state: { id },
+  } = useLocation();
 
   useEffect(() => {
-    if (selectedInspection !== null) {
-      void getInspection(selectedInspection?.id);
+    if (!isNil(id)) {
+      void getInspection(id);
     }
-  }, []);
+  }, [id]);
 
   const getInspection = async (id: string): Promise<void> => {
     try {
       inspectionDispatch({
         type: InspectionActionTypes.loading,
+        payload: {
+          isLoading: true,
+        },
       });
       const { data } = await inspectionService.getInspection({ id });
 

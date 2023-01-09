@@ -23,6 +23,9 @@ export interface RemoveInspectionAction {
 
 export interface LoadingInspectionAction {
   type: InspectionActionTypes.loading;
+  payload: {
+    isLoading: boolean;
+  };
 }
 
 export interface ErrorInspectionAction {
