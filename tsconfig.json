@@ -3,7 +3,7 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "DOM.Iterable"],
     "module": "CommonJS",
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -13,10 +13,12 @@
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
     "rootDirs": ["src", "tests"],
+    "resolveJsonModule": true,
     "paths": {
       "~/*": ["./src/*"],
       "#/*": ["./tests/*"]
     }
   },
-  "include": ["src", "tests"]
+  "include": ["src", "tests", "./.eslintrc.js"],
+  "exclude": ["src/index.d.ts"]
 }
