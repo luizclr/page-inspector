@@ -58,7 +58,6 @@ npm start
 
 ```
 \component
-    index.tsx
     component.tsx
     component.styles.tsx
     component.container.tsx
