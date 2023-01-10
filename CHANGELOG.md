@@ -14,6 +14,23 @@ When a new release is proposed:
 
 ### Added
 
+-
+
+### Fixed
+
+-
+
+### Changed
+
+-
+
+### Removed
+
+
+## [1.1.0] - 10/01/2023
+
+### Added
+
 - added `isNil()` and `isEmpty()` tests
 - added pages tests
 - added `<SingleInputForm />`
