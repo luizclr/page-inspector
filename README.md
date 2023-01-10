@@ -1,4 +1,5 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3686df98-70c6-43be-bb8b-f5f7b5b238c9/deploy-status)](https://app.netlify.com/sites/page-inspector/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3686df98-70c6-43be-bb8b-f5f7b5b238c9/deploy-status)](https://app.netlify.com/sites/page-inspector/deploys)[![CircleCI](https://dl.circleci.com/status-badge/img/gh/luizclr/page-inspector/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/luizclr/page-inspector/tree/main)
+
 
 # 🔍 Page Inspector
 
