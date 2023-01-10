@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should be able to mount <Search /> component 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="sc-bcXHqe jtSBjQ"
+    >
+      Search
+    </h2>
+    <div
+      class="sc-gswNZR gVBGiX"
+    >
+      <div>
+        <button
+          class="sc-dkrFOg chzZRQ"
+        >
+          reload
+        </button>
+      </div>
+      <ul
+        class="sc-eDvSVe esERdg"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -6,7 +6,7 @@ exports[`<AddSearch /> should be able to mount <AddSearch /> component 1`] = `
     <h2
       class="sc-bcXHqe jtSBjQ"
     >
-      Add Search
+      Add
     </h2>
     <div
       class="sc-gswNZR jVxbqf"

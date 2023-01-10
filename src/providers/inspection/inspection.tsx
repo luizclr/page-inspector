@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactElement, useContext, useReducer } from "react";
+import { PropsWithChildren, ReactElement, useContext, useMemo, useReducer } from "react";
 
 import InspectionContext, { initialState } from "~/contexts/inspection/inspection";
 import { InspectionStateType } from "~/contexts/inspection/types";
@@ -10,19 +10,18 @@ export const InspectionProvider = ({ children }: PropsWithChildren): ReactElemen
     initialState
   );
 
-  return (
-    <InspectionContext.Provider
-      value={{
-        isLoading,
-        error,
-        inspections,
-        inspectionService,
-        inspectionDispatch,
-      }}
-    >
-      {children}
-    </InspectionContext.Provider>
+  const value = useMemo(
+    () => ({
+      isLoading,
+      error,
+      inspections,
+      inspectionService,
+      inspectionDispatch,
+    }),
+    [inspections, isLoading, error]
   );
+
+  return <InspectionContext.Provider value={value}>{children}</InspectionContext.Provider>;
 };
 
 export const useInspection = (): InspectionStateType => useContext(InspectionContext);

@@ -1,21 +1,22 @@
+import { faker } from "@faker-js/faker";
 import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
-import { Searches } from "~/pages/searches/searches";
+import { Search } from "~/pages/search/search";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useLocation: () => ({
-    state: { id: "id" },
+    state: { key: faker.random.word(), id: faker.random.alphaNumeric(8) },
   }),
 }));
 
-describe("<Searches />", () => {
-  it("should be able to mount <Searches /> component", async () => {
+describe("<Search />", () => {
+  it("should be able to mount <Search /> component", async () => {
     // given
     const { asFragment } = render(
       <BrowserRouter>
-        <Searches />
+        <Search />
       </BrowserRouter>
     );
 

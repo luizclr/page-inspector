@@ -23,11 +23,6 @@ export const InspectionReducer = (
         isLoading: false,
         inspections: [action.payload.inspection, ...state.inspections],
       };
-    case InspectionActionTypes.remove:
-      return {
-        ...state,
-        inspections: state.inspections.filter((item) => item.id !== action.payload.id),
-      };
     default:
       return state;
   }

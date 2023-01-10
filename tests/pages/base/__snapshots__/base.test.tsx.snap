@@ -28,15 +28,15 @@ exports[`<Base /> should be able to mount <Base /> component 1`] = `
               class="sc-dkrFOg lblbZX"
               href="/"
             >
-              Add Search
+              Add
             </a>
           </li>
           <li>
             <a
               class="sc-dkrFOg gjegTi"
-              href="/searches"
+              href="/search"
             >
-              Searches
+              Search
             </a>
           </li>
         </ul>

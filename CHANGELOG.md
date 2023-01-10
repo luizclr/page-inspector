@@ -23,11 +23,12 @@ When a new release is proposed:
 
 ### Changed
 
--
+- refactor pages to `add` and `search`
 
 ### Removed
 
--
+- `LocalStorageService`
+- no more necessary action types
 
 ## [1.0.0] - 09/01/2023
 ### Added

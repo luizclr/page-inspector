@@ -9,8 +9,8 @@ import { BasePage, SearchIcon, Title, TitleWrapper } from "~/pages/base/base.sty
 
 export const Base = ({ children }: PropsWithChildren): ReactElement => {
   const navList: NavItem[] = [
-    { to: "/", label: "Add Search" },
-    { to: "/searches", label: "Searches" },
+    { to: "/", label: "Add" },
+    { to: "/search", label: "Search" },
   ];
 
   return (
