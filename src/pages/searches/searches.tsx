@@ -22,15 +22,13 @@ import { isNil } from "~/utils";
 export const Searches: React.FC = () => {
   const [selectedInspection, setSelectedInspection] = useState<Inspection | null>(null);
   const { inspections, inspectionService, inspectionDispatch } = useInspection();
-  const {
-    state: { id },
-  } = useLocation();
+  const { state } = useLocation();
 
   useEffect(() => {
-    if (!isNil(id)) {
-      void getInspection(id);
+    if (!isNil(state?.id)) {
+      void getInspection(state.id);
     }
-  }, [id]);
+  }, []);
 
   const getInspection = async (id: string): Promise<void> => {
     try {

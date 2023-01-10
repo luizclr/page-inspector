@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Base /> should be able to mount <Base /> component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-hLBbgP dmMTyU"
+  >
+    <div>
+      <div
+        class="sc-jSUZER jyTrAT"
+      >
+        <img
+          class="sc-gKPRtg kxaLeV"
+          src="test-file-stub"
+        />
+        <h1
+          class="sc-eDvSVe cHVeUU"
+        >
+          Page Inspector
+        </h1>
+      </div>
+      <div>
+        <ul
+          class="sc-gswNZR cILWRN"
+        >
+          <li>
+            <a
+              class="sc-dkrFOg lblbZX"
+              href="/"
+            >
+              Add Search
+            </a>
+          </li>
+          <li>
+            <a
+              class="sc-dkrFOg gjegTi"
+              href="/searches"
+            >
+              Searches
+            </a>
+          </li>
+        </ul>
+        <div
+          class="sc-bcXHqe jqdCop"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -15,6 +15,7 @@ When a new release is proposed:
 ### Added
 
 - added `isNil()` and `isEmpty()` tests
+- added pages tests
 
 ### Fixed
 

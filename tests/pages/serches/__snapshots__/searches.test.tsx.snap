@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Searches /> should be able to mount <Searches /> component 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="sc-gswNZR YqaVI"
+    >
+      Searches
+    </h2>
+    <div
+      class="sc-dkrFOg kJEZRB"
+    >
+      <div
+        class="sc-hLBbgP jpKNMp"
+      >
+        <p>
+          saved:
+        </p>
+        <ul
+          class="sc-eDvSVe dhMdAi"
+        />
+      </div>
+      <div
+        class="sc-ftTHYK jctzJl"
+      >
+        <div>
+          <button
+            class="sc-iBYQkv gpdlHd"
+          >
+            remover
+          </button>
+          <button
+            class="sc-gKPRtg cFTPBS"
+          >
+            reload
+          </button>
+        </div>
+        <ul
+          class="sc-pyfCe izPdum"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

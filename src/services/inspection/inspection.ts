@@ -1,21 +1,22 @@
-import { AxiosResponse } from "axios";
+import { AxiosInstance, AxiosResponse } from "axios";
 
-import httpClient from "~/config/axios";
 import { Inspection } from "~/entities/inspection";
 import {
   addInspectionRequest,
   addInspectionResponse,
   getInspectionRequest,
   getInspectionResponse,
-} from "~/services/inspection-service/types";
+} from "~/services/inspection/types";
 
 export default class InspectionService {
+  constructor(private readonly httpClient: AxiosInstance) {}
+
   async addInspection(request: addInspectionRequest): Promise<addInspectionResponse> {
-    return await httpClient.post("/crawl", request);
+    return await this.httpClient.post("/crawl", request);
   }
 
   async getInspection(request: getInspectionRequest): Promise<getInspectionResponse> {
-    const response: AxiosResponse<Inspection> = await httpClient.get(`/crawl/${request.id}`);
+    const response: AxiosResponse<Inspection> = await this.httpClient.get(`/crawl/${request.id}`);
 
     return response;
   }
