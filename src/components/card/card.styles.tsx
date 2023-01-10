@@ -33,6 +33,6 @@ export const Card = styled.div<CardProps>`
   box-shadow: ${({ shadowSize = CardShadowSize.sm }) => getCardShadow(shadowSize)};
 
   :hover {
-    cursor: ${({ onClick }) => (isNil(onClick) ? "pointer" : "initial")};
+    cursor: ${({ onClick }) => (isNil(onClick) ? "initial" : "pointer")};
   }
 `;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddSearch /> should be able to mount <AddSearch /> component 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="sc-pyfCe btkRwI"
+    >
+      Add
+    </h2>
+    <div
+      class="sc-gKPRtg kSugmH"
+    >
+      <input
+        class="sc-iBYQkv flXZRN"
+        placeholder="e.g.: security"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-ftTHYK kjevxZ"
+        disabled=""
+        type="submit"
+      >
+        ADD
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

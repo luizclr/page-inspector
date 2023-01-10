@@ -2,22 +2,16 @@ import { Inspection } from "~/entities/inspection";
 
 export enum InspectionActionTypes {
   add = "ADD_INSPECTION",
-  remove = "REMOVE_INSPECTION",
+  addId = "ADD_INSPECTION_ID",
   loading = "LOADING_INSPECTION",
   error = "ERROR_INSPECTION",
+  reset = "RESET_INSPECTION",
 }
 
 export interface AddInspectionAction {
   type: InspectionActionTypes.add;
   payload: {
     inspection: Inspection;
-  };
-}
-
-export interface RemoveInspectionAction {
-  type: InspectionActionTypes.remove;
-  payload: {
-    id: string;
   };
 }
 
@@ -32,8 +26,12 @@ export interface ErrorInspectionAction {
   type: InspectionActionTypes.error;
 }
 
+export interface ResetInspectionAction {
+  type: InspectionActionTypes.reset;
+}
+
 export type InspectionAction =
   | AddInspectionAction
-  | RemoveInspectionAction
   | LoadingInspectionAction
-  | ErrorInspectionAction;
+  | ErrorInspectionAction
+  | ResetInspectionAction;

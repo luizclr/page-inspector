@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Card } from "~/components/card/card";
+
 export const BasePage = styled.div`
   background-color: #f0f1f3;
   height: 100%;
@@ -25,4 +27,21 @@ export const TitleWrapper = styled.div`
 
 export const SearchIcon = styled.img`
   width: 50px;
+`;
+
+export const BaseCard = styled(Card)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ErrorBar = styled.div`
+  background-color: #ff9999;
+  color: #881b1b;
+  border: 1px solid #881b1b;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 10px;
+  max-width: 400px;
+  text-align: center;
 `;

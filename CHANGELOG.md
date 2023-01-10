@@ -14,19 +14,27 @@ When a new release is proposed:
 
 ### Added
 
--
+- added `isNil()` and `isEmpty()` tests
+- added pages tests
+- added `<SingleInputForm />`
+- added `<Clipboard />`
+- added `<Clipboard />`component in `<Add />`page
+- added reset action
+- added tests do `<Card />`, `<Clipboard />` components and all pages
 
 ### Fixed
 
--
+- fix nav-list on reload page
 
 ### Changed
 
--
+- refactor pages to `add` and `search`
+- refactor `inspections[]` to `ìnspection` in `InspectionStateType`
 
 ### Removed
 
--
+- `LocalStorageService`
+- no more necessary action types
 
 ## [1.0.0] - 09/01/2023
 ### Added
@@ -36,12 +44,12 @@ When a new release is proposed:
 - Added tests configuration
 - Added eslint configuration
 - Added server to production
-- Added <Card /> component
-- Added <Loading /> component
-- Added <NavList /> component
-- Added <AddSearch /> page
-- Added <Searches /> page
-- Added <Base /> page
+- Added `<Card />` component
+- Added `<Loading />` component
+- Added `<NavList />` component
+- Added `<AddSearch />` page
+- Added `<Searches />` page
+- Added `<Base />` page
 - Added `ÌnspectionService` and `LocalStorageService`
 
 ### Fixed

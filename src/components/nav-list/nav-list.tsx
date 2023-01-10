@@ -1,10 +1,20 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { List, NavItem } from "~/components/nav-list/nav-list.styles";
 import { NavListProps } from "~/components/nav-list/types";
+import { useInspection } from "~/providers/inspection/inspection";
+import { InspectionActionTypes } from "~/reducers/inspector/types";
 
 export const NavList = ({ list }: NavListProps): ReactElement => {
+  const { dispatch } = useInspection();
   const [active, setActive] = useState(list[0].label);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === "/search") setActive("Search");
+    else setActive("Add");
+  });
 
   return (
     <List>
@@ -13,6 +23,9 @@ export const NavList = ({ list }: NavListProps): ReactElement => {
           <NavItem
             onClick={() => {
               setActive(item.label);
+              dispatch({
+                type: InspectionActionTypes.reset,
+              });
             }}
             to={item.to}
             isActive={item.label === active}

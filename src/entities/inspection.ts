@@ -8,3 +8,8 @@ export interface Inspection {
   status: InspectionStatus;
   urls: string[];
 }
+
+export interface InspectionKeyMap {
+  key: string;
+  value: string;
+}

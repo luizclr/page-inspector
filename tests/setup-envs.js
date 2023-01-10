@@ -1,12 +1,11 @@
 const fs = require("fs");
 
-const envPath = fs.existsSync("./.env") ? "./.env" : "./.env.example";
-
-fs.readFileSync(envPath)
+fs.readFileSync("./.env.example")
   .toString()
   .split("\n")
   .forEach((row) => {
     const [key, value] = row.split("=");
 
-    process.env[key] = value;
+    // eslint-disable-next-line quotes
+    process.env[key] = value.split('"')[1];
   });

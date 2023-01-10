@@ -21,12 +21,14 @@ export const InspectionReducer = (
       return {
         ...state,
         isLoading: false,
-        inspections: [action.payload.inspection, ...state.inspections],
+        inspection: action.payload.inspection,
       };
-    case InspectionActionTypes.remove:
+    case InspectionActionTypes.reset:
       return {
         ...state,
-        inspections: state.inspections.filter((item) => item.id !== action.payload.id),
+        isLoading: false,
+        inspection: undefined,
+        error: false,
       };
     default:
       return state;

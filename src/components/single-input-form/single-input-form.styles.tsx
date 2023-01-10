@@ -1,20 +1,12 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
-  font-size: 18pt;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  color: #474b4e;
-`;
-
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
 `;
 
 export const Input = styled.input`
-  margin-bottom: 15px;
   font-size: 12pt;
   padding: 10px;
   width: 400px;
@@ -28,7 +20,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button<{ disabled: boolean }>`
-  margin: 15px;
+  margin-left: 15px;
   font-size: 12pt;
   padding: 10px;
   width: 200px;

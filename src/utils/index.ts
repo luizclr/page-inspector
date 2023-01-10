@@ -3,7 +3,7 @@ export const isNil = (data: unknown): boolean => {
   return false;
 };
 
-export const isEmpty = (data: string | []): boolean => {
+export const isEmpty = (data: string | unknown[]): boolean => {
   if (data.length === 0) return true;
   return false;
 };
