@@ -17,6 +17,7 @@ When a new release is proposed:
 - added `isNil()` and `isEmpty()` tests
 - added pages tests
 - added `<SingleInputForm />`
+- added `<Clipboard />`
 
 ### Fixed
 
