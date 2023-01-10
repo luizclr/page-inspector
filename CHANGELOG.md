@@ -25,6 +25,7 @@ When a new release is proposed:
 ### Changed
 
 - refactor pages to `add` and `search`
+- refactor `inspections[]` to `ìnspection` in `InspectionStateType`
 
 ### Removed
 

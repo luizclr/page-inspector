@@ -8,9 +8,9 @@ import InspectionService from "~/services/inspection/inspection";
 export const initialState: InspectionStateType = {
   isLoading: false,
   error: false,
-  inspections: [],
+  inspection: undefined,
   inspectionService: new InspectionService(axiosClient),
-  inspectionDispatch: (() => undefined) as Dispatch<InspectionAction>,
+  dispatch: (() => undefined) as Dispatch<InspectionAction>,
 };
 
 const InspectionContext = createContext<InspectionStateType>(initialState);

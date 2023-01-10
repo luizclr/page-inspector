@@ -16,7 +16,7 @@ import { isNil } from "~/utils";
 
 export const Search: React.FC = () => {
   const [selectedInspection, setSelectedInspection] = useState<Inspection | null>(null);
-  const { inspectionService, inspectionDispatch } = useInspection();
+  const { inspectionService, dispatch } = useInspection();
   const { state } = useLocation();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const Search: React.FC = () => {
 
   const getInspection = async (id: string): Promise<void> => {
     try {
-      inspectionDispatch({
+      dispatch({
         type: InspectionActionTypes.loading,
         payload: {
           isLoading: true,
@@ -36,14 +36,14 @@ export const Search: React.FC = () => {
       const { data } = await inspectionService.getInspection({ id });
 
       setSelectedInspection(data);
-      inspectionDispatch({
+      dispatch({
         type: InspectionActionTypes.add,
         payload: {
           inspection: data,
         },
       });
     } catch (error) {
-      inspectionDispatch({
+      dispatch({
         type: InspectionActionTypes.error,
       });
     }

@@ -21,7 +21,7 @@ export const InspectionReducer = (
       return {
         ...state,
         isLoading: false,
-        inspections: [action.payload.inspection, ...state.inspections],
+        inspection: action.payload.inspection,
       };
     default:
       return state;

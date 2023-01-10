@@ -7,14 +7,14 @@ import { useInspection } from "~/providers/inspection/inspection";
 import { InspectionActionTypes } from "~/reducers/inspector/types";
 
 export const Add: React.FC = () => {
-  const { inspectionService, inspectionDispatch } = useInspection();
+  const { inspectionService, dispatch } = useInspection();
   const navigate = useNavigate();
 
   useEffect(() => {}, []);
 
   const handleClick = async (text: string): Promise<void> => {
     try {
-      inspectionDispatch({
+      dispatch({
         type: InspectionActionTypes.loading,
         payload: {
           isLoading: true,
@@ -29,7 +29,7 @@ export const Add: React.FC = () => {
         },
       });
     } catch (error) {
-      inspectionDispatch({
+      dispatch({
         type: InspectionActionTypes.error,
       });
     }

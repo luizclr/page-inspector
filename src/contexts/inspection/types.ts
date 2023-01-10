@@ -7,7 +7,7 @@ import InspectionService from "~/services/inspection/inspection";
 export type InspectionStateType = {
   isLoading: boolean;
   error: boolean;
-  inspections: Inspection[];
+  inspection?: Inspection;
   inspectionService: InspectionService;
-  inspectionDispatch: Dispatch<InspectionAction>;
+  dispatch: Dispatch<InspectionAction>;
 };

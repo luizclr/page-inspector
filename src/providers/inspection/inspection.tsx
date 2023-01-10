@@ -5,7 +5,7 @@ import { InspectionStateType } from "~/contexts/inspection/types";
 import { InspectionReducer } from "~/reducers/inspector/inspector";
 
 export const InspectionProvider = ({ children }: PropsWithChildren): ReactElement => {
-  const [{ isLoading, error, inspections, inspectionService }, inspectionDispatch] = useReducer(
+  const [{ isLoading, error, inspection, inspectionService }, dispatch] = useReducer(
     InspectionReducer,
     initialState
   );
@@ -14,11 +14,11 @@ export const InspectionProvider = ({ children }: PropsWithChildren): ReactElemen
     () => ({
       isLoading,
       error,
-      inspections,
+      inspection,
       inspectionService,
-      inspectionDispatch,
+      dispatch,
     }),
-    [inspections, isLoading, error]
+    [inspection, isLoading, error]
   );
 
   return <InspectionContext.Provider value={value}>{children}</InspectionContext.Provider>;
