@@ -1,13 +1,21 @@
 import { PropsWithChildren, ReactElement } from "react";
 
 import search from "~/assets/img/search.png";
-import { Card } from "~/components/card/card";
 import { CardShadowSize, CardSize } from "~/components/card/types";
 import { NavList } from "~/components/nav-list/nav-list";
 import { NavItem } from "~/components/nav-list/types";
-import { BasePage, SearchIcon, Title, TitleWrapper } from "~/pages/base/base.styles";
+import {
+  BaseCard,
+  BasePage,
+  ErrorBar,
+  SearchIcon,
+  Title,
+  TitleWrapper,
+} from "~/pages/base/base.styles";
+import { useInspection } from "~/providers/inspection/inspection";
 
 export const Base = ({ children }: PropsWithChildren): ReactElement => {
+  const { error } = useInspection();
   const navList: NavItem[] = [
     { to: "/", label: "Add" },
     { to: "/search", label: "Search" },
@@ -22,9 +30,14 @@ export const Base = ({ children }: PropsWithChildren): ReactElement => {
         </TitleWrapper>
         <div>
           <NavList list={navList} />
-          <Card shadowSize={CardShadowSize.lg} size={CardSize.xg}>
+          <BaseCard shadowSize={CardShadowSize.lg} size={CardSize.xg}>
             <div>{children}</div>
-          </Card>
+            {error && (
+              <ErrorBar>
+                <p>Something wrong happened. Try again :/</p>
+              </ErrorBar>
+            )}
+          </BaseCard>
         </div>
       </div>
     </BasePage>

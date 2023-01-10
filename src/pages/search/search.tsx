@@ -8,6 +8,10 @@ export const Search: React.FC = () => {
   const { inspection, inspectionService, dispatch } = useInspection();
 
   const getInspection = async (id: string): Promise<void> => {
+    dispatch({
+      type: InspectionActionTypes.reset,
+    });
+
     try {
       dispatch({
         type: InspectionActionTypes.loading,

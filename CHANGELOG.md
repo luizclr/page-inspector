@@ -19,6 +19,7 @@ When a new release is proposed:
 - added `<SingleInputForm />`
 - added `<Clipboard />`
 - added `<Clipboard />`component in `<Add />`page
+- added reset action
 
 ### Fixed
 

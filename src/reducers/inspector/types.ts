@@ -5,6 +5,7 @@ export enum InspectionActionTypes {
   addId = "ADD_INSPECTION_ID",
   loading = "LOADING_INSPECTION",
   error = "ERROR_INSPECTION",
+  reset = "RESET_INSPECTION",
 }
 
 export interface AddInspectionAction {
@@ -25,7 +26,12 @@ export interface ErrorInspectionAction {
   type: InspectionActionTypes.error;
 }
 
+export interface ResetInspectionAction {
+  type: InspectionActionTypes.reset;
+}
+
 export type InspectionAction =
   | AddInspectionAction
   | LoadingInspectionAction
-  | ErrorInspectionAction;
+  | ErrorInspectionAction
+  | ResetInspectionAction;

@@ -23,6 +23,13 @@ export const InspectionReducer = (
         isLoading: false,
         inspection: action.payload.inspection,
       };
+    case InspectionActionTypes.reset:
+      return {
+        ...state,
+        isLoading: false,
+        inspection: undefined,
+        error: false,
+      };
     default:
       return state;
   }
