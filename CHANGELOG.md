@@ -14,7 +14,7 @@ When a new release is proposed:
 
 ### Added
 
-- added circleci config file
+-
 
 ### Fixed
 
@@ -25,6 +25,12 @@ When a new release is proposed:
 -
 
 ### Removed
+
+## [1.1.1] - 10/01/2023
+
+### Added
+
+- added circleci config file
 
 
 ## [1.1.0] - 10/01/2023
