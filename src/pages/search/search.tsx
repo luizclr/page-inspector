@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import { SingleInputForm } from "~/components/single-input-form/single-input-form";
 import { Inspection } from "~/entities/inspection";
 import {
   ReloadButton,
@@ -19,38 +20,45 @@ export const Search: React.FC = () => {
   const { state } = useLocation();
 
   useEffect(() => {
-    const getInspection = async (id: string): Promise<void> => {
-      try {
-        inspectionDispatch({
-          type: InspectionActionTypes.loading,
-          payload: {
-            isLoading: true,
-          },
-        });
-        const { data } = await inspectionService.getInspection({ id });
-
-        setSelectedInspection(data);
-        inspectionDispatch({
-          type: InspectionActionTypes.add,
-          payload: {
-            inspection: data,
-          },
-        });
-      } catch (error) {
-        inspectionDispatch({
-          type: InspectionActionTypes.error,
-        });
-      }
-    };
-
     if (!isNil(state?.id)) {
       void getInspection(state.id);
     }
   }, [state]);
 
+  const getInspection = async (id: string): Promise<void> => {
+    try {
+      inspectionDispatch({
+        type: InspectionActionTypes.loading,
+        payload: {
+          isLoading: true,
+        },
+      });
+      const { data } = await inspectionService.getInspection({ id });
+
+      setSelectedInspection(data);
+      inspectionDispatch({
+        type: InspectionActionTypes.add,
+        payload: {
+          inspection: data,
+        },
+      });
+    } catch (error) {
+      inspectionDispatch({
+        type: InspectionActionTypes.error,
+      });
+    }
+  };
+
   return (
     <div>
       <Title>Search</Title>
+      <SingleInputForm
+        buttonText="SEARCH"
+        handleClick={async (text) => {
+          await getInspection(text);
+        }}
+        placeholder="e.g.: hNrn6rCp"
+      />
       <Wrapper>
         <div>
           <ReloadButton>reload</ReloadButton>

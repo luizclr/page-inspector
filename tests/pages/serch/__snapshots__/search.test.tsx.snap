@@ -4,22 +4,39 @@ exports[`<Search /> should be able to mount <Search /> component 1`] = `
 <DocumentFragment>
   <div>
     <h2
-      class="sc-bcXHqe jtSBjQ"
+      class="sc-hLBbgP cHvYIq"
     >
       Search
     </h2>
     <div
-      class="sc-gswNZR gVBGiX"
+      class="sc-bcXHqe ggCrYr"
+    >
+      <input
+        class="sc-gswNZR EyzNS"
+        placeholder="e.g.: hNrn6rCp"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-dkrFOg jsUcRe"
+        disabled=""
+        type="submit"
+      >
+        SEARCH
+      </button>
+    </div>
+    <div
+      class="sc-eDvSVe doLnMB"
     >
       <div>
         <button
-          class="sc-dkrFOg chzZRQ"
+          class="sc-jSUZER JkjOu"
         >
           reload
         </button>
       </div>
       <ul
-        class="sc-eDvSVe esERdg"
+        class="sc-iBYQkv fYrfA-d"
       />
     </div>
   </div>

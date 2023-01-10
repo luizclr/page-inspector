@@ -4,21 +4,21 @@ exports[`<AddSearch /> should be able to mount <AddSearch /> component 1`] = `
 <DocumentFragment>
   <div>
     <h2
-      class="sc-bcXHqe jtSBjQ"
+      class="sc-hLBbgP cHvYIq"
     >
       Add
     </h2>
     <div
-      class="sc-gswNZR jVxbqf"
+      class="sc-bcXHqe ggCrYr"
     >
       <input
-        class="sc-dkrFOg fvqUtP"
-        placeholder="e.g: security"
+        class="sc-gswNZR EyzNS"
+        placeholder="e.g.: security"
         type="text"
         value=""
       />
       <button
-        class="sc-hLBbgP iamWso"
+        class="sc-dkrFOg jsUcRe"
         disabled=""
         type="submit"
       >

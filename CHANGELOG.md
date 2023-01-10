@@ -16,6 +16,7 @@ When a new release is proposed:
 
 - added `isNil()` and `isEmpty()` tests
 - added pages tests
+- added `<SingleInputForm />`
 
 ### Fixed
 
@@ -38,12 +39,12 @@ When a new release is proposed:
 - Added tests configuration
 - Added eslint configuration
 - Added server to production
-- Added <Card /> component
-- Added <Loading /> component
-- Added <NavList /> component
-- Added <AddSearch /> page
-- Added <Searches /> page
-- Added <Base /> page
+- Added `<Card />` component
+- Added `<Loading />` component
+- Added `<NavList />` component
+- Added `<AddSearch />` page
+- Added `<Searches />` page
+- Added `<Base />` page
 - Added `ÌnspectionService` and `LocalStorageService`
 
 ### Fixed
