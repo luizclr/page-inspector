@@ -2,6 +2,7 @@ import { Inspection } from "~/entities/inspection";
 
 export enum InspectionActionTypes {
   add = "ADD_INSPECTION",
+  addId = "ADD_INSPECTION_ID",
   loading = "LOADING_INSPECTION",
   error = "ERROR_INSPECTION",
 }

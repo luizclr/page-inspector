@@ -1,29 +1,11 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-
 import { SingleInputForm } from "~/components/single-input-form/single-input-form";
-import { Inspection } from "~/entities/inspection";
-import {
-  ReloadButton,
-  ResultList,
-  ResultListItem,
-  Title,
-  Wrapper,
-} from "~/pages/search/search.styles";
+import { ResultList, ResultListItem, Title } from "~/pages/search/search.styles";
 import { useInspection } from "~/providers/inspection/inspection";
 import { InspectionActionTypes } from "~/reducers/inspector/types";
 import { isNil } from "~/utils";
 
 export const Search: React.FC = () => {
-  const [selectedInspection, setSelectedInspection] = useState<Inspection | null>(null);
-  const { inspectionService, dispatch } = useInspection();
-  const { state } = useLocation();
-
-  useEffect(() => {
-    if (!isNil(state?.id)) {
-      void getInspection(state.id);
-    }
-  }, [state]);
+  const { inspection, inspectionService, dispatch } = useInspection();
 
   const getInspection = async (id: string): Promise<void> => {
     try {
@@ -35,7 +17,6 @@ export const Search: React.FC = () => {
       });
       const { data } = await inspectionService.getInspection({ id });
 
-      setSelectedInspection(data);
       dispatch({
         type: InspectionActionTypes.add,
         payload: {
@@ -54,25 +35,23 @@ export const Search: React.FC = () => {
       <Title>Search</Title>
       <SingleInputForm
         buttonText="SEARCH"
-        handleClick={async (text) => {
-          await getInspection(text);
-        }}
+        handleClick={getInspection}
         placeholder="e.g.: hNrn6rCp"
       />
-      <Wrapper>
-        <div>
-          <ReloadButton>reload</ReloadButton>
-        </div>
-        <ResultList>
-          {selectedInspection?.urls.map((el) => (
-            <ResultListItem key={el}>
-              <a target="_blank" href={el} rel="noreferrer">
-                {el}
-              </a>
-            </ResultListItem>
-          ))}
-        </ResultList>
-      </Wrapper>
+      <ResultList>
+        {!isNil(inspection) && (
+          <>
+            <p>Urls:</p>
+            {inspection?.urls.map((el) => (
+              <ResultListItem key={el}>
+                <a target="_blank" href={el} rel="noreferrer">
+                  {el}
+                </a>
+              </ResultListItem>
+            ))}
+          </>
+        )}
+      </ResultList>
     </div>
   );
 };

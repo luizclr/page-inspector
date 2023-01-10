@@ -4,13 +4,13 @@ import { Button, Input, Wrapper } from "~/components/single-input-form/single-in
 import { SingleInputFormProps } from "~/components/single-input-form/types";
 import { isEmpty } from "~/utils";
 
+// const SingleInputFormBase: React.FC<SingleInputFormProps> = ({
 export const SingleInputForm: React.FC<SingleInputFormProps> = ({
   buttonText,
   placeholder = "",
-  initialValue = "",
   handleClick,
 }: SingleInputFormProps) => {
-  const [text, setText] = useState<string>(initialValue);
+  const [text, setText] = useState<string>("");
 
   return (
     <Wrapper>
@@ -26,6 +26,7 @@ export const SingleInputForm: React.FC<SingleInputFormProps> = ({
         disabled={isEmpty(text)}
         onClick={async () => {
           await handleClick(text);
+          setText("");
         }}
         type="submit"
       >
@@ -34,3 +35,5 @@ export const SingleInputForm: React.FC<SingleInputFormProps> = ({
     </Wrapper>
   );
 };
+
+// export const SingleInputForm = useMemo(() => SingleInputFormBase, [SingleInputFormBase]);

@@ -18,10 +18,11 @@ When a new release is proposed:
 - added pages tests
 - added `<SingleInputForm />`
 - added `<Clipboard />`
+- added `<Clipboard />`component in `<Add />`page
 
 ### Fixed
 
--
+- fix 
 
 ### Changed
 

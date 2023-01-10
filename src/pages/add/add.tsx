@@ -1,16 +1,15 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
+import { Clipboard } from "~/components/clipboard/clipboard";
 import { SingleInputForm } from "~/components/single-input-form/single-input-form";
 import { Title } from "~/pages/add/add.styles";
 import { useInspection } from "~/providers/inspection/inspection";
 import { InspectionActionTypes } from "~/reducers/inspector/types";
+import { isEmpty } from "~/utils";
 
 export const Add: React.FC = () => {
   const { inspectionService, dispatch } = useInspection();
-  const navigate = useNavigate();
-
-  useEffect(() => {}, []);
+  const [id, setId] = useState<string>("");
 
   const handleClick = async (text: string): Promise<void> => {
     try {
@@ -22,10 +21,12 @@ export const Add: React.FC = () => {
       });
       const { data } = await inspectionService.addInspection({ keyword: text });
 
-      navigate("/search", {
-        state: {
-          key: text,
-          id: data.id,
+      setId(data.id);
+
+      dispatch({
+        type: InspectionActionTypes.loading,
+        payload: {
+          isLoading: false,
         },
       });
     } catch (error) {
@@ -39,6 +40,12 @@ export const Add: React.FC = () => {
     <div>
       <Title>Add</Title>
       <SingleInputForm buttonText="ADD" handleClick={handleClick} placeholder="e.g.: security" />
+      <Clipboard
+        label="Word added with success! copy this code, go to 'search' page and search for it."
+        show={!isEmpty(id)}
+        alertText="Copied!"
+        text={id}
+      />
     </div>
   );
 };

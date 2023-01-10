@@ -7,10 +7,6 @@ export const Title = styled.h2`
   color: #474b4e;
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
-`;
-
 export const ReloadButton = styled.button`
   margin: 15px;
   font-size: 12pt;
