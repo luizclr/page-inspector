@@ -1,10 +1,17 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { List, NavItem } from "~/components/nav-list/nav-list.styles";
 import { NavListProps } from "~/components/nav-list/types";
 
 export const NavList = ({ list }: NavListProps): ReactElement => {
-  const [active, setActive] = useState(list[0].label);
+  const [active, setActive] = useState(list[0].to);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === "/search") setActive("/search");
+    else setActive("/");
+  });
 
   return (
     <List>
@@ -15,7 +22,7 @@ export const NavList = ({ list }: NavListProps): ReactElement => {
               setActive(item.label);
             }}
             to={item.to}
-            isActive={item.label === active}
+            isActive={item.to === active}
           >
             {item.label}
           </NavItem>

@@ -22,7 +22,7 @@ When a new release is proposed:
 
 ### Fixed
 
-- fix 
+- fix nav-list on reload page
 
 ### Changed
 
