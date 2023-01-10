@@ -20,6 +20,7 @@ When a new release is proposed:
 - added `<Clipboard />`
 - added `<Clipboard />`component in `<Add />`page
 - added reset action
+- added tests do `<Card />`, `<Clipboard />` components and all pages
 
 ### Fixed
 

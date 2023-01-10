@@ -21,11 +21,11 @@ exports[`<Base /> should be able to mount <Base /> component 1`] = `
       </div>
       <div>
         <ul
-          class="sc-gswNZR cILWRN"
+          class="sc-bcXHqe gueZjF"
         >
           <li>
             <a
-              class="sc-dkrFOg lblbZX"
+              class="sc-gswNZR bKSYpF"
               href="/"
             >
               Add
@@ -33,7 +33,7 @@ exports[`<Base /> should be able to mount <Base /> component 1`] = `
           </li>
           <li>
             <a
-              class="sc-dkrFOg gjegTi"
+              class="sc-gswNZR bQNaWA"
               href="/search"
             >
               Search
@@ -41,7 +41,7 @@ exports[`<Base /> should be able to mount <Base /> component 1`] = `
           </li>
         </ul>
         <div
-          class="sc-bcXHqe jqdCop"
+          class="sc-dkrFOg IjBuX sc-iBYQkv dFBliE"
         >
           <div />
         </div>

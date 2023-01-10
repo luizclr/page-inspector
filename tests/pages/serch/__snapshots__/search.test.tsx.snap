@@ -4,7 +4,7 @@ exports[`<Search /> should be able to mount <Search /> component 1`] = `
 <DocumentFragment>
   <div>
     <h2
-      class="sc-hLBbgP cHvYIq"
+      class="sc-hLBbgP dCYQyq"
     >
       Search
     </h2>
@@ -25,20 +25,9 @@ exports[`<Search /> should be able to mount <Search /> component 1`] = `
         SEARCH
       </button>
     </div>
-    <div
-      class="sc-eDvSVe doLnMB"
-    >
-      <div>
-        <button
-          class="sc-jSUZER JkjOu"
-        >
-          reload
-        </button>
-      </div>
-      <ul
-        class="sc-iBYQkv fYrfA-d"
-      />
-    </div>
+    <ul
+      class="sc-gKPRtg heGRtm"
+    />
   </div>
 </DocumentFragment>
 `;
