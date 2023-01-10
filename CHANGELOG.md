@@ -14,7 +14,7 @@ When a new release is proposed:
 
 ### Added
 
--
+- added circleci config file
 
 ### Fixed
 
