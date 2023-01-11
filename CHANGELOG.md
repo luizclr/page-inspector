@@ -26,6 +26,12 @@ When a new release is proposed:
 
 ### Removed
 
+## [1.1.2] - 10/01/2023
+
+### Added
+
+- added images to readme file
+
 ## [1.1.1] - 10/01/2023
 
 ### Added
